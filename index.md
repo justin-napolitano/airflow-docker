@@ -244,5 +244,3 @@ docker-compose up --build
 Conclusion
 Running Apache Airflow with Docker simplifies the setup and allows you to develop and test your workflows efficiently.That said, I prefer gcp cloud run. I think provisioning a managed version in google could be worth it for a large organization.. but for my personal projects gcp is the way to go. 
 
-
-
