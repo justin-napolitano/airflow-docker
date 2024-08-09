@@ -1,4 +1,15 @@
-# Running Apache Airflow with Docker: A Quick Guide
++++
+title =  "Airflow + Neo4j DAG"
+description = "Deploying Airflow and a NEO4j Dag"
+tags = ['java', "postgresql","cdp"]
+images = ["images/feature-image.png"]
+date = "2024-07-31T14:25:13-05:00"
+categories = ["projects"]
+series = ["java", "supreme-court"]
++++
+
+
+# Running Apache Airflow with Docker: Deploy A Neo4j Workflow
 
 
 Apache Airflow is a powerful tool for orchestrating complex workflows, and running it with Docker simplifies the setup and maintenance of the environment. In this guide, we will walk through setting up Apache Airflow using Docker, making sure that any changes to your DAGs (Directed Acyclic Graphs) are immediately reflected in the running environment.
