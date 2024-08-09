@@ -1,0 +1,36 @@
+[2024-08-09 20:02:29,266] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: neo4j_workflow.make_contributor_to_subject_relationships scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-08-09 20:02:29,274] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: neo4j_workflow.make_contributor_to_subject_relationships scheduled__2023-01-13T00:00:00+00:00 [queued]>
+[2024-08-09 20:02:29,274] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-09 20:02:29,274] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-08-09 20:02:29,274] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-09 20:02:29,289] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): make_contributor_to_subject_relationships> on 2023-01-13 00:00:00+00:00
+[2024-08-09 20:02:29,291] {standard_task_runner.py:52} INFO - Started process 92 to run task
+[2024-08-09 20:02:29,295] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'neo4j_workflow', 'make_contributor_to_subject_relationships', 'scheduled__2023-01-13T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/sup_court_graph_workflow.py', '--cfg-path', '/tmp/tmp4xae6pot', '--error-file', '/tmp/tmpc_d272ec']
+[2024-08-09 20:02:29,295] {standard_task_runner.py:80} INFO - Job 15: Subtask make_contributor_to_subject_relationships
+[2024-08-09 20:02:29,375] {task_command.py:369} INFO - Running <TaskInstance: neo4j_workflow.make_contributor_to_subject_relationships scheduled__2023-01-13T00:00:00+00:00 [running]> on host 93d118974d3b
+[2024-08-09 20:02:29,466] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=neo4j_workflow
+AIRFLOW_CTX_TASK_ID=make_contributor_to_subject_relationships
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-13T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-13T00:00:00+00:00
+[2024-08-09 20:02:29,467] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/sup_court_graph_workflow.py", line 23, in make_contributor_to_subject_relationships
+    driver = GraphDatabase.driver(NEO4J_URL, auth=(NEO4J_USER, NEO4J_PASSWORD))
+  File "/home/airflow/.local/lib/python3.7/site-packages/neo4j/__init__.py", line 152, in driver
+    driver_type, security_type, parsed = parse_neo4j_uri(uri)
+  File "/home/airflow/.local/lib/python3.7/site-packages/neo4j/api.py", line 361, in parse_neo4j_uri
+    URI_SCHEME_NEO4J_SECURE
+neo4j.exceptions.ConfigurationError: URI scheme b'' is not supported. Supported URI schemes are ['bolt', 'bolt+ssc', 'bolt+s', 'neo4j', 'neo4j+ssc', 'neo4j+s']. Examples: bolt://host[:port] or neo4j://host[:port][?routing_context]
+[2024-08-09 20:02:29,476] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=neo4j_workflow, task_id=make_contributor_to_subject_relationships, execution_date=20230113T000000, start_date=20240809T200229, end_date=20240809T200229
+[2024-08-09 20:02:29,490] {standard_task_runner.py:97} ERROR - Failed to execute job 15 for task make_contributor_to_subject_relationships (URI scheme b'' is not supported. Supported URI schemes are ['bolt', 'bolt+ssc', 'bolt+s', 'neo4j', 'neo4j+ssc', 'neo4j+s']. Examples: bolt://host[:port] or neo4j://host[:port][?routing_context]; 92)
+[2024-08-09 20:02:29,507] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-08-09 20:02:29,543] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

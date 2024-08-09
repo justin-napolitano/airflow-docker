@@ -1,0 +1,5 @@
+neo4j==4.4.6
+psycopg2-binary==2.9.3
+python-dotenv==0.20.0
+# Add any other dependencies your DAGs require
+
