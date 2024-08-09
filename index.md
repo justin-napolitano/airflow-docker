@@ -3,7 +3,7 @@ title =  "Airflow + Neo4j DAG"
 description = "Deploying Airflow and a NEO4j Dag"
 tags = ['java', "postgresql","cdp"]
 images = ["images/feature-image.png"]
-date = "2024-07-31T14:25:13-05:00"
+date = "2024-08-9T14:25:13-05:00"
 categories = ["projects"]
 series = ["java", "supreme-court"]
 +++
