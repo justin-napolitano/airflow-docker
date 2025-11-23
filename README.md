@@ -1,16 +1,16 @@
 # airflow-docker
 
-A Dockerized Apache Airflow setup for easy orchestration and management of workflows. This project provides a ready-to-use Docker Compose environment to run Airflow with PostgreSQL and Redis, simplifying local development and testing.
+A Dockerized Apache Airflow setup designed for straightforward orchestration and management of workflows in a local development environment. This repository provides a Docker Compose configuration integrating Airflow with PostgreSQL and Redis, enabling rapid deployment and testing.
 
 ---
 
 ## Features
 
-- Docker Compose setup including Airflow components, PostgreSQL, and Redis
-- Custom Dockerfile to build Airflow images
-- Sample DAGs demonstrating workflow orchestration
-- Fernet key generation script for Airflow security
-- Logs and SQL directories for extensibility
+- Complete Docker Compose environment including Airflow components, PostgreSQL, and Redis
+- Custom Dockerfile to build Airflow images tailored for this setup
+- Sample DAGs demonstrating basic and advanced workflow orchestration
+- Fernet key generation script to secure Airflow metadata
+- Organized directories for DAGs, logs, plugins, and SQL scripts
 
 ## Tech Stack
 
@@ -18,8 +18,8 @@ A Dockerized Apache Airflow setup for easy orchestration and management of workf
 - Docker & Docker Compose
 - PostgreSQL 13
 - Redis 6.2
-- Python (for DAGs and utility scripts)
-- Neo4j (used in sample DAG for graph database interactions)
+- Python (for DAG definitions and utility scripts)
+- Neo4j (integrated in sample DAG for graph database operations)
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ git clone https://github.com/justin-napolitano/airflow-docker.git
 cd airflow-docker
 ```
 
-2. Generate a Fernet key (used for Airflow encryption):
+2. Generate a Fernet key (used by Airflow for encryption):
 
 ```bash
 python3 fernet_key_generator.py
@@ -56,7 +56,7 @@ export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN="postgresql+psycopg2://airflow:airflo
 docker-compose up --build
 ```
 
-5. The Airflow webserver will be accessible at [http://localhost:8089](http://localhost:8089) (note the port mapping).
+5. Access the Airflow webserver at [http://localhost:8089](http://localhost:8089).
 
 6. Place your DAG files inside the `dags/` directory to have them automatically loaded.
 
@@ -69,23 +69,19 @@ airflow-docker/
 │   └── sup_court_graph_workflow.py  # DAG interacting with Neo4j graph database
 ├── logs/                   # Airflow logs
 ├── plugins/                # Custom Airflow plugins (empty by default)
-├── sql/                    # Cypher and SQL query files used by DAGs
+├── sql/                    # Cypher and SQL scripts for workflows
+├── Dockerfile              # Custom Dockerfile to build Airflow image
 ├── docker-compose.yml      # Docker Compose configuration
-├── Dockerfile              # Dockerfile to build Airflow image
 ├── fernet_key_generator.py # Script to generate Fernet key
 ├── generate_fernet_key.sh  # Shell script alternative to generate Fernet key
-├── readme.md               # This documentation
-└── requirements.txt        # Python dependencies for Airflow environment
+├── README.md               # This file
+├── requirements.txt        # Python dependencies
 ```
 
 ## Future Work / Roadmap
 
-- Add more example DAGs showcasing different Airflow features and integrations
-- Improve documentation with troubleshooting tips and advanced configuration
-- Add support for Airflow plugins and custom operators
-- Integrate CI/CD pipelines for automated testing and deployment
-- Explore deployment options beyond Docker Compose, e.g., Kubernetes
-
----
-
-*Note: This project is primarily designed for local development and testing. For production deployments, consider managed Airflow services or cloud-native solutions.*
+- Expand sample DAGs with more complex workflows and integrations
+- Add automated tests for DAGs and environment setup
+- Provide support for additional Airflow plugins and operators
+- Enhance documentation with troubleshooting and advanced configuration guides
+- Explore deployment options beyond local Docker, e.g., Kubernetes
