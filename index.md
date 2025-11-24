@@ -1,12 +1,28 @@
 ---
-slug: "github-airflow-docker"
-title: "airflow-docker"
-repo: "justin-napolitano/airflow-docker"
-githubUrl: "https://github.com/justin-napolitano/airflow-docker"
-generatedAt: "2025-11-23T08:34:38.625053Z"
-source: "github-auto"
+slug: github-airflow-docker
+title: Dockerized Apache Airflow Setup with PostgreSQL, Redis, and Neo4j Integration
+repo: justin-napolitano/airflow-docker
+githubUrl: https://github.com/justin-napolitano/airflow-docker
+generatedAt: '2025-11-23T08:34:38.625053Z'
+source: github-auto
+summary: >-
+  Detailed overview of a Docker Compose configuration for Apache Airflow with PostgreSQL, Redis, and
+  example DAGs including Neo4j graph database integration.
+tags:
+  - apache-airflow
+  - docker
+  - postgresql
+  - redis
+  - neo4j
+  - workflow-orchestration
+seoPrimaryKeyword: apache airflow docker setup
+seoSecondaryKeywords:
+  - postgresql metadata database
+  - redis celery broker
+  - neo4j integration
+  - docker-compose airflow
+seoOptimized: true
 ---
-
 
 # airflow-docker: Technical Overview and Implementation Notes
 
