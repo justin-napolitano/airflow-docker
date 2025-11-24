@@ -22,6 +22,13 @@ seoSecondaryKeywords:
   - neo4j integration
   - docker-compose airflow
 seoOptimized: true
+topicFamily: automation
+topicFamilyConfidence: 0.95
+topicFamilyNotes: >-
+  The post focuses on automating the setup and orchestration of Airflow workflows using Docker
+  Compose, involving configuration of supporting services like PostgreSQL, Redis, and Neo4j. The
+  content aligns with automation of deployment and environment setup, matching the 'automation'
+  family's description and example slugs that include docker and deployment workflows.
 ---
 
 # airflow-docker: Technical Overview and Implementation Notes
@@ -79,3 +86,4 @@ This DAG also uses environment variables loaded from a `.env` file inside the co
 ## Summary
 
 This project provides a practical, containerized Airflow environment that simplifies local orchestration development. It integrates key components, supports workflow examples including graph database interactions, and follows best practices for environment configuration and security. The modular structure and clear separation of concerns facilitate extension and adaptation to specific use cases.
+
