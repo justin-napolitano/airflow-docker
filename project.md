@@ -1,20 +1,31 @@
 ---
 slug: github-airflow-docker
 id: github-airflow-docker
-title: airflow-docker
+title: Dockerized Apache Airflow Setup for Local Development
 repo: justin-napolitano/airflow-docker
 githubUrl: https://github.com/justin-napolitano/airflow-docker
 generatedAt: '2025-11-24T21:33:53.953Z'
 source: github-auto
 summary: >-
-  A Dockerized Apache Airflow setup designed for straightforward orchestration
-  and management of workflows in a local development environment. This
-  repository provides a Docker Compose configuration integrating Airflow with
-  PostgreSQL and Redis, enabling rapid deployment and testing.
-tags: []
-seoPrimaryKeyword: ''
-seoSecondaryKeywords: []
-seoOptimized: false
+  A complete guide to setting up Apache Airflow with Docker for efficient
+  workflow management in a local environment.
+tags:
+  - apache airflow
+  - docker
+  - docker-compose
+  - postgresql
+  - redis
+  - python
+  - neo4j
+  - workflow orchestration
+seoPrimaryKeyword: dockerized apache airflow setup
+seoSecondaryKeywords:
+  - airflow docker compose
+  - local airflow environment
+  - airflow postgres integration
+  - workflow management with docker
+  - airflow sample dags
+seoOptimized: true
 topicFamily: null
 topicFamilyConfidence: null
 kind: project
