@@ -1,13 +1,13 @@
 ---
 slug: github-airflow-docker
-title: Dockerized Apache Airflow Setup with PostgreSQL, Redis, and Neo4j Integration
+title: Dockerized Apache Airflow Setup with PostgreSQL and Redis
 repo: justin-napolitano/airflow-docker
 githubUrl: https://github.com/justin-napolitano/airflow-docker
 generatedAt: '2025-11-23T08:34:38.625053Z'
 source: github-auto
 summary: >-
-  Detailed overview of a Docker Compose configuration for Apache Airflow with PostgreSQL, Redis, and
-  example DAGs including Neo4j graph database integration.
+  Explore a streamlined Docker setup for Apache Airflow, integrating PostgreSQL
+  and Redis for efficient local workflow orchestration.
 tags:
   - apache-airflow
   - docker
@@ -15,20 +15,28 @@ tags:
   - redis
   - neo4j
   - workflow-orchestration
-seoPrimaryKeyword: apache airflow docker setup
+  - apache airflow
+  - docker-compose
+  - workflow orchestration
+seoPrimaryKeyword: dockerized apache airflow setup
 seoSecondaryKeywords:
-  - postgresql metadata database
-  - redis celery broker
-  - neo4j integration
-  - docker-compose airflow
+  - airflow local development
+  - postgresql integration
+  - redis message broker
+  - docker-compose configuration
+  - workflow examples
+  - environment variable management
 seoOptimized: true
 topicFamily: automation
 topicFamilyConfidence: 0.95
 topicFamilyNotes: >-
-  The post focuses on automating the setup and orchestration of Airflow workflows using Docker
-  Compose, involving configuration of supporting services like PostgreSQL, Redis, and Neo4j. The
-  content aligns with automation of deployment and environment setup, matching the 'automation'
-  family's description and example slugs that include docker and deployment workflows.
+  The post focuses on automating the setup and orchestration of Airflow
+  workflows using Docker Compose, involving configuration of supporting services
+  like PostgreSQL, Redis, and Neo4j. The content aligns with automation of
+  deployment and environment setup, matching the 'automation' family's
+  description and example slugs that include docker and deployment workflows.
+kind: project
+id: github-airflow-docker
 ---
 
 # airflow-docker: Technical Overview and Implementation Notes
